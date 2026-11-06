@@ -1,0 +1,3 @@
+dataset,context_recall,f1,rouge1,rouge2,factuality
+WixQA-ExpertWritten,0.99,0.2584,0.2827,0.1739,0.34
+WixQA-Simulated,0.89,0.1735,0.2057,0.1086,0.27

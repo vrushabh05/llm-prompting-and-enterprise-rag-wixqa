@@ -1,0 +1,11 @@
+model,strategy,accuracy,precision,recall,f1,valid_predictions
+gpt-4o,Zero-shot,0.8080,0.7665,0.7512,0.7588,500
+gpt-4o,Five-shot,0.8080,0.8070,0.6866,0.7419,500
+gpt-4o,Chain-of-thought,0.8040,0.8084,0.6716,0.7337,500
+gpt-4o,Self-consistency,0.8080,0.8107,0.6816,0.7405,500
+gpt-4o,Tree-of-thought,0.7866,0.7500,0.7005,0.7244,492
+gpt-4o-mini,Zero-shot,0.7920,0.7771,0.6766,0.7234,500
+gpt-4o-mini,Five-shot,0.7520,0.7305,0.6070,0.6630,500
+gpt-4o-mini,Chain-of-thought,0.7700,0.8413,0.5274,0.6483,500
+gpt-4o-mini,Self-consistency,0.7560,0.7484,0.5920,0.6611,500
+gpt-4o-mini,Tree-of-thought,0.7520,0.7151,0.6368,0.6737,500
