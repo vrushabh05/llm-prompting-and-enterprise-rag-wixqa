@@ -59,7 +59,7 @@ flowchart LR
 ## Caveats
 
 - **The notebook header says GPT-4.1 and GPT-4o, but the code runs `gpt-4o` and `gpt-4o-mini`.** This README reports what was executed.
-- **Most differences are small for the sample sizes.** With 500 passengers, 0.808 vs 0.804 is two passengers. With 100 RAG queries, a 0.04 factuality gap is four queries. Only the semantic-chunking drop and the gpt-4o vs gpt-4o-mini gap on few-shot and chain-of-thought are large. Nothing was repeated across seeds.
+- **Most differences are small for the sample sizes.** With 500 passengers, 0.808 vs 0.804 is two passengers. With 100 RAG queries, a 0.04 factuality gap is four queries. Only the semantic-chunking drop and the gpt-4o vs gpt-4o-mini gap on few-shot (5.6 points) are clearly beyond that noise. Nothing was repeated across seeds.
 - **The tuning grid is weakly informative.** It used 50 queries, and context recall sat between 0.90 and 1.00 for every setting, so it barely separated them. F1 ranged only from 0.47 to 0.54.
 - **The LLM judge is the same model as the generator.** Context recall and factuality are judged by `gpt-4o`, which also writes the answers, and the judge sees only a yes/no prompt. Treat those two metrics as a rough signal.
 - **The baseline is not identical across runs.** The first run gave Expert recall 0.99 and F1 0.258, the comparison run 0.96 and 0.263. The comparison samples 100 queries with a fixed seed. The notebook does not say whether the first run used the same queries, so this may be sampling, nondeterministic generation or judge noise. It is a measure of how much the small differences above can be trusted.
